@@ -5,7 +5,7 @@ import os
 
 st.title("🎓 Student Performance Prediction App")
 
-model_path = "C:/Users/user/student-performance-app/student_model.pkl"
+model_path = "student_model.pkl"
 
 if os.path.exists(model_path):
     model = joblib.load(model_path)
@@ -28,3 +28,4 @@ if st.button("Predict"):
     prediction = model.predict(input_data)
 
     st.success(f"Predicted Performance: {prediction[0]:.2f}")
+
