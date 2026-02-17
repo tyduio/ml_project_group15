@@ -16,7 +16,7 @@ else:
 st.sidebar.header("Enter Student Data")
 
 class_participation = st.sidebar.number_input("Class Participation", 0, 100)
-weekly_self_study_hours = st.sidebar.number_input("Weekly Self Study Hours", 0, 50)
+weekly_self_study_hours = st.sidebar.number_input("Weekly Self Study Hours", 0, 18)
 attendance_percentage = st.sidebar.number_input("Attendance Percentage", 0, 100)
 
 if st.button("Predict"):
@@ -28,4 +28,5 @@ if st.button("Predict"):
     prediction = model.predict(input_data)
 
     st.success(f"Predicted Performance: {prediction[0]:.2f}")
+
 
